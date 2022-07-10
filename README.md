@@ -1,38 +1,15 @@
-# ArticleSummarizationFordham
+# Article Summarization Fordham
 
-Problem statement - Article summarization.
-A substantial portion of RV's business is in publishers like Healthline and CNET. These publishers make money by displaying ads alongside the content. They do not use paywalls, so revenue is directly proportional the number of articles that users read. From this perspective, being a successful publisher is all about writing great content. This can be accomplished through many editorial strategies.
+## **PROBLEM STATEMENT**
 
-Red Ventures seeks to augment traditional editorial practices with data driven ones. Here are some questions that could inform an editorial strategy, which can be answered with data:
+For PIC Math at Fordham University we worked with Red Ventures as the sponsor of our project. Red Ventures is a media company that works on improving online experiences for the consumers of their brands. Our industry liasions were Dr. Ruiye Ni, Data Science Manager, and Jason Woo, Data Scientist. 
 
-What are the top 10 articles this week about?
-What are the topics our readers care most about?
-What do we write most about?
-Do we do more product reviews, news pieces, or opinion pieces?
-What should we write about next?
-How many words should be in a tech review?
-Do readers prefer an active or passive voice?
-How many articles do we have on auto-immune disorders? What about social media?
-Now if every article published by a Red Ventures property had the same editor assign tags from a consistent set, write a summary, and log grammatical metadata, then we would be well on our way to answering many of these important questions. However, RV operates hundreds of sites, which publish articles from staff writers, freelancers, and experts in their field with sometimes very different editorial processes. If we wish to answer these questions at the portfolio level, we require tools to understand language in an automated and algorithmic way.
+The statement of our problem is to generate summaries no longer than 280 characters for a dataset comprised of 1177 articles from Red Ventures' websites, and generate articles recommendations based on the summaries produced. Often when we search for something using an online search engine, the engine provides search results that have links to websites containing the best matches the search query according to the algorithm that the search engine uses. Under these links, most search engines provide brief summaries of the content that users may find by clicking on the corresponding link. Since we worked on article summariation for Red Ventures, one primary goal of our problem was to increase the qualtiy of the summaries for the articles that appear on Red Ventures' websites so that these websites appear higher in search results when users enter a reasonably related search query. 
 
-Summarizing content.
-One common need, which allows us to make meaningful improvements in things like content recommendation, search engine optimization, and portfolio understanding, is the ability to summarize text.
+In terms of article recommendations, it is important to note that websites where articles are published have increasing been following the trend of having a second, similar article appear directly below the article on the same webpage where users are reading at a given time. As such, the other goal of our problem is to generate logical recommendations for what this second article should be using the summaries that our model generates. This problem of article summarization and recommendation is important because high quality summaries can move Red Ventures articles, or any articles, higher in search results, which increases user traffic on Red Ventures websites and therefore generates more advertisement revenue because of the increased likelihood that a user clicks on an advertisement revenue because of the increased likelihood that a user clicks on an advertisement after visiting a website. The recommendaations after a given article are of similar importance, since high quality article recommendations increase user retenetion after reading the article they initially search for, making them more likely to see and click on advertisements that appear lower on the webpage near the recommended second article.
 
-Think about the movies you like to watch - what do they have in common? To answer this question you probably did not start replaying the movies in your head frame by frame, rather you probably thought about their summaries. In my case, they all happen to be murder mysteries set in dreary English estates. Should I watch "The ABC Murders" on Amazon Prime Video? Well, it's a murder mystery set in various dreary English locales, so yes, I probably will watch it.
+## **PROCEDURE**
 
-The goal of this problem is to generate meaningful article summaries, which could be used as:
+## **FILE EXPLANATIONS**
+To follow along with our procedure and produce our final product all the files used have been included in this repository. 
 
-Data to create article recommendations.
-Data to understand a body of articles.
-Data to populate meta tags that search engines use to rank pages.
-The Data
-The data for this problem is a collection of 1,177 recent news articles from CNET, ZDNet, TVGuide, and GameSpot (4 technology focused properties in the CNET Media Group owned by Red Ventures) scraped on January 4, 2022.
-
-Each article contains only an ID (from 0 to 1176), a source describing the site it was scraped from, and the article text. Since this text was scraped from the HTML, it may be messy and interspersed with links from outside of the article body.
-
-This data is highly representative of the kind of data that practicing data scientists in industry commonly encounter.
-
-The problem.
-For each article, generate a summary of no more than 280 characters. Use these summaries to generate recommendations for each article to be interpretted as the article which the user should read next.
-
-Work will be judged on both the intuitive quality of the summaries and recommendations.
